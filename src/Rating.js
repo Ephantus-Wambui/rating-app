@@ -1,34 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoIosStar, IoIosStarOutline } from 'react-icons/io'
 
 function Rating(props) {
+
+    const [rating, setRating] = useState(props.rating)
+
     return (
         <div>
-            <h1>Rating: {props.rating}</h1>
-            {props.rating >= 1 ? (
-                <IoIosStar />
+            <h1>Rating: {rating}</h1>
+            {rating >= 1 ? (
+                <IoIosStar onClick={() => setRating(1)} />
             ) : (
-                <IoIosStarOutline />
+                <IoIosStarOutline onClick={() => setRating(1)} />
             )}
-            {props.rating >= 2 ? (
-                <IoIosStar />
+            {rating >= 2 ? (
+                <IoIosStar onClick={() => setRating(2)} />
             ) : (
-                <IoIosStarOutline />
+                <IoIosStarOutline onClick={() => setRating(2)} />
             )}
-            {props.rating >= 3 ? (
-                <IoIosStar />
+            {rating >= 3 ? (
+                <IoIosStar onClick={() => setRating(3)} />
             ) : (
-                <IoIosStarOutline />
+                <IoIosStarOutline onClick={() => setRating(3)} />
             )}
-            {props.rating >= 4 ? (
-                <IoIosStar />
+            {rating >= 4 ? (
+                <IoIosStar onClick={() => setRating(4)} />
             ) : (
-                <IoIosStarOutline />
+                <IoIosStarOutline onClick={() => setRating(4)} />
             )}
-            {props.rating >= 5 ? (
-                <IoIosStar />
+            {rating >= 5 ? (
+                <IoIosStar onClick={() => setRating(5)} />
             ) : (
-                <IoIosStarOutline/>
+                <IoIosStarOutline onClick={() => setRating(5)} />
             )}
         </div>
     )
